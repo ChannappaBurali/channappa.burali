@@ -1,0 +1,33 @@
+
+<input type="text" value="{{sayHello() }}"><br/>
+<input type="text" [value]="sayHello()" /><br/>
+<input type="text" bind-value="sayHello()" /><br/>
+<input type="submit" class="btn" [value]="btnText">
+<br/>
+<input type="button" (click)="buttonClick()"/>
+<br/>
+<input type="text"  [(ngModel)]="title" />
+<br/>
+<p>Show Value Of Input Box: {{ title }}</p>
+<br/>
+<br/>
+<input type="text" [(ngModel)]="empName"/>
+<br/>
+<input type="button" value="Submit data" (click)="addEmployee()" />
+<h1>List of Employees</h1>
+<ul>
+  <li *ngFor="let emp of employees">{{emp}}</li>
+</ul>
+<input type="text" value="{{sayHello() }}" (change)="true" #variable ><br/>
+
+{{ variable.value }}
+<br/>
+First Name: &nbsp;<input type="text" #firstNameInput><br/>
+Last Name: &nbsp;<input type="text" #lastNameInput><br/>
+<button (click)="show()">Show</button><br/>
+My Fullname is: {{fullName}}
+<div *ngIf="true">
+  <input type="text" value="Do you see me?" #variable1/>
+  
+{{ variable1.value }}
+</div>
